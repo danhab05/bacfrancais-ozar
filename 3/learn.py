@@ -11,7 +11,7 @@ with open('3.json', encoding='utf-8') as fh:
     data = json.load(fh)
 
 for el in data:
-    os.system("cls")
+    os.system("clear")
     print(colored(el["citation"], "green"))
     # engine.say(el["citation"])
     # engine.runAndWait()
