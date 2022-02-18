@@ -15,7 +15,7 @@ for el in data:
     print(colored(el["citation"], "green"))
     engine.say(el["citation"])
     engine.runAndWait()
-    sleep(2)
+    sleep(4)
 
     print(colored(el["procedes"], "yellow"))
     engine.say(el["procedes"])
@@ -24,4 +24,4 @@ for el in data:
     print(colored(el['analyse'], "blue"))
     engine.say(el["analyse"])
     engine.runAndWait()
-    sleep(3)
+    sleep(6)
