@@ -7,7 +7,9 @@ import json
 # voice = engine.getProperty('voices')[0]  # the french voice
 # engine.setProperty('voice', voice.id)
 
-with open('7.json', encoding='utf-8') as fh:
+os.system("clear")
+n = input('Entrez le numero de texte (1,2,3,4,5,7,8): ')
+with open(f'{n}/{n}.json', encoding='utf-8') as fh:
     data = json.load(fh)
 
 for el in data:

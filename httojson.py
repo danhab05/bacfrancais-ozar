@@ -20,5 +20,5 @@ with open('a.html', 'r') as f:
                 )
         except Exception:
             pass
-with open('m1.json', 'w', encoding='utf-8') as f:
+with open('m.json', 'w', encoding='utf-8') as f:
     json.dump(lst, f, ensure_ascii=False, indent=4)
