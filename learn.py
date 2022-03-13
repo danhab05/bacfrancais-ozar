@@ -25,7 +25,7 @@ for el in data:
     if "MOUVEMENT" in citation:
         title = citation
     else:
-        print(title)
+        print((colored(title, "red"))
     input(colored(citation, "green"))
     input(colored(el["procedes"], "yellow")) 
     input(colored(el['analyse'], "blue"))
