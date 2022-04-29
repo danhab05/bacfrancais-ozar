@@ -15,7 +15,7 @@ while True:
     while True:
         try:
             n = input('Entrez le numero de texte (1,2,3,4,5,7,8,9,10): ')
-            with open(f'{n}/{n}.json', encoding='utf-8') as fh:
+            with open(f'Json_files/{n}/{n}.json', encoding='utf-8') as fh:
                 data = json.load(fh)
             break
         except Exception:
