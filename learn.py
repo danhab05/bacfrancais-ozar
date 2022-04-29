@@ -35,3 +35,5 @@ while True:
         input(colored(citation, "green"))
         input(colored(el["procedes"], "yellow"))
         input(colored(el['analyse'], "blue"))
+
+        
