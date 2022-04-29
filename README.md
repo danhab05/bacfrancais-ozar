@@ -1,6 +1,8 @@
 # Bacfrancais ozar
 
-Bacfrancais-ozar est le moyen le plus simple de reviser les textes de l'oral de francais de ozar creteil, 2022.
+Bacfrancais-ozar est le moyen le plus simple de reviser les textes de l'oral de Français de ozar Créteil, 2022.\
+Les analyses linéaires ainsi que les textes sont disponibles sur le lien [suivant](https://bacfrancais-2237a.web.app/)
+
 ## Installation
 
 ```bash
