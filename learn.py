@@ -3,6 +3,7 @@ import json
 import os
 import platform
 from time import sleep
+import requests
 from termcolor import colored
 import json
 # import pyttsx3
@@ -16,8 +17,9 @@ while True:
         os.system("clear")
     while True:
         try:
-            
-            n = input('Entrez le numero de texte (1,2,3,4,5,7,8,9,10): ')
+            response = requests.get("https://raw.githubusercontent.com/danhab05/bacfrancais-ozar/master/msg.txt")
+            msg = response.text
+            n = input(msg)
             with urllib.request.urlopen(f"https://raw.githubusercontent.com/danhab05/bacfrancais-ozar/master/Json_files/{n}/{n}.json") as url:
                 data = json.loads(url.read().decode())
             break
