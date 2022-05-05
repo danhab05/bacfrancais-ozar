@@ -1,3 +1,5 @@
+import urllib.request
+import json
 import os
 import platform
 from time import sleep
@@ -14,9 +16,10 @@ while True:
         os.system("clear")
     while True:
         try:
+            
             n = input('Entrez le numero de texte (1,2,3,4,5,7,8,9,10): ')
-            with open(f'Json_files/{n}/{n}.json', encoding='utf-8') as fh:
-                data = json.load(fh)
+            with urllib.request.urlopen(f"https://raw.githubusercontent.com/danhab05/bacfrancais-ozar/master/Json_files/{n}/{n}.json") as url:
+                data = json.loads(url.read().decode())
             break
         except Exception:
             pass
@@ -35,5 +38,3 @@ while True:
         input(colored(citation, "green"))
         input(colored(el["procedes"], "yellow"))
         input(colored(el['analyse'], "blue"))
-
-        
