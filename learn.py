@@ -23,14 +23,14 @@ while True:
             with urllib.request.urlopen(f"https://raw.githubusercontent.com/danhab05/bacfrancais-ozar/master/Json_files/{n}/{n}.json") as url:
                 data = json.loads(url.read().decode())
             break
-        except requests.ConnectionError:
-            f = open("msg.txt", 'r')
-            msg = f.readline(1)
-            n = input(msg)
-            with open(f'Json_files/{n}/{n}.json', encoding='utf-8') as fh:
-                data = json.load(fh)
-            break
-        except Exception:
+        except Exception as e:
+            if "HTTPSConnectionPool" in str(e):
+                with open('msg.txt') as f:
+                    msg = f.readline()
+                n = input(msg)
+                with open(f'Json_files/{n}/{n}.json', encoding='utf-8') as fh:
+                    data = json.load(fh)
+                break
             pass
 
     title = ""
