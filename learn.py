@@ -17,20 +17,13 @@ while True:
         os.system("clear")
     while True:
         try:
-            response = requests.get("https://raw.githubusercontent.com/danhab05/bacfrancais-ozar/master/msg.txt")
-            msg = response.text
+            with open('msg.txt') as f:
+                msg = f.readline()
             n = input(msg)
-            with urllib.request.urlopen(f"https://raw.githubusercontent.com/danhab05/bacfrancais-ozar/master/Json_files/{n}/{n}.json") as url:
-                data = json.loads(url.read().decode())
+            with open(f'Json_files/{n}/{n}.json', encoding='utf-8') as fh:
+                data = json.load(fh)
             break
-        except Exception as e:
-            if "HTTPSConnectionPool" in str(e):
-                with open('msg.txt') as f:
-                    msg = f.readline()
-                n = input(msg)
-                with open(f'Json_files/{n}/{n}.json', encoding='utf-8') as fh:
-                    data = json.load(fh)
-                break
+        except Exception:
             pass
 
     title = ""
